@@ -1,0 +1,10 @@
+cpr_yz0: THEORY
+BEGIN
+IMPORTING float@aerr754dp
+
+% @fp-function
+yz0 (Lat: unb_double): unb_double =
+    floor(((((Lat - (360/60) * floor(Lat/(360/ 60))) / (360/ 60)) * 131072) + 0.5))
+
+END cpr_yz0
+

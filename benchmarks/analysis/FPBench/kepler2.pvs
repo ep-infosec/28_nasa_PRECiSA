@@ -1,0 +1,14 @@
+kepler2: THEORY
+BEGIN
+IMPORTING float@aerr754dp
+
+% @fp-function
+kepler2 (X1,X2,X3,X4,X5,X6: unb_double):unb_double = 
+    X1 * X4 * (-X1 + X2 + X3 - X4 + X5 + X6)
+                 + X2 * X5 * (X1 - X2 + X3 + X4 - X5 + X6)
+		 + X3 * X6 * (X1 + X2 - X3 + X4 + X5 - X6)
+		 - X2 * X3 * X4 - X1 * X3 * X5
+		 - X1 * X2 * X6 - X4 * X5 * X6
+
+END kepler2
+
